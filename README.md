@@ -13,7 +13,7 @@ Use the following command to segment a word list (each line: \<word\> \<freq\>),
 
 The output also gives the derivational chain information. For example, the word _sterilizing_ is derivated by sterilize, deleting _e_ and plus _-ing_, which is then derived from _sterile_, deleting _e_ and plus _-ize_. The line will be like the following except that there will be no brackets.
 
-sterilizing \t steril iz ing \t (sterile $ $) (sterile DEL-e ize) (sterilize DEL-e ing)
+sterilizing \<\t\> steril iz ing \<\t\> (sterile $ $) (sterile DEL-e ize) (sterilize DEL-e ing)
 
 ## Rerun the COLING paper's experiments
 Go to coling2018.py for details
