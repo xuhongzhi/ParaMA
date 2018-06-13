@@ -6,10 +6,14 @@ This is an unsupervised tool for analyzing suffixation morphology for any langua
 
 Hongzhi Xu, Mitch Marcus, Charles Yang, and Lyle Ungar. 2018. Unsupervised Morphology Learning with Statistical Paradigms. (To appear) In *Proceedings of the 27th International Conference on Computational Linguistics (COLING 2018)*. Santa Fe, New-Mexico, USA.
 
-## Get Started
-Use the following command to segment a word list (each line: \<word\> \<freq\>), and save it to a file.
+## Segment a word list
+Use the following command to segment a word list (each line: \<word\> \<freq\>), and save it to a file. 
 
   python3 main.py my_data.txt my_data_seg.txt
+
+The output also gives the derivational chain information. For example, the word _sterilizing_ is derivated by sterilize, deleting _e_ and plus _-ing_, which is then derived from _sterile_, deleting _e_ and plus _-ize_. The line will be like the following except that there will be no brackets.
+
+sterilizing \t steril iz ing \t (sterile $ $) (sterile DEL-e ize) (sterilize DEL-e ing)
 
 ## Rerun the COLING paper's experiments
 Go to coling2018.py for details
