@@ -86,6 +86,7 @@ def run_turkish():
     params.DoPruning = False
     params.DoCompound = False
     params.ExcludeUnreliable = False
+    params.BestNCandSuffix = 150
     infile_train = r'data/wordlist.2010.tur.utf8.txt'
     infile_test_gold = r'data/mit/gold.tur.txt'
     run_experiment(infile_train, infile_test_gold, params)
