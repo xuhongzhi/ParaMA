@@ -71,18 +71,32 @@ def run_experiment(infile_train, infile_test_gold, params):
 
 def run_english():
     params = Parameter()
+    params.UseTransRules = True
+    params.DoPruning = True
+    params.DoCompound = True
+    params.ExcludeUnreliable = True
+    params.BestNCandSuffix = 70
     infile_train = r'data/wordlist.2010.eng.utf8.txt'
     infile_test_gold = r'data/mit/gold.eng.txt'
     run_experiment(infile_train, infile_test_gold, params)
 
 def run_turkish():
     params = Parameter()
+    params.UseTransRules = True
+    params.DoPruning = False
+    params.DoCompound = False
+    params.ExcludeUnreliable = False
     infile_train = r'data/wordlist.2010.tur.utf8.txt'
     infile_test_gold = r'data/mit/gold.tur.txt'
     run_experiment(infile_train, infile_test_gold, params)
 
 def run_finnish():
     params = Parameter()
+    params.UseTransRules = False
+    params.DoPruning = True
+    params.DoCompound = True
+    params.ExcludeUnreliable = True
+    params.BestNCandSuffix = 150
     infile_train = r'data/wordlist.2010.fin.utf8.txt'
     infile_test_gold = r'data/mit/gold.fin.txt'
     run_experiment(infile_train, infile_test_gold, params)
